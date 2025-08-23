@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauteng Modern Pentathlon Biathle & Triathle Championships 2025</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the app */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light grey background, keeps good contrast */
+            margin: 0;
+            padding-top: 64px; /* Space for fixed navbar */
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: #2d3748; /* Dark grey for general text */
+        }
+        .navbar {
+            background-color: #0f79b7; /* Primary Blue for navbar */
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .navbar-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .nav-links a {
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background-color 0.2s, transform 0.1s;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            background-color: #0b6094; /* Slightly darker blue for hover effect */
+            transform: translateY(-1px);
+        }
+        .section-container {
+            max-width: 900px;
+            margin: 32px auto;
+            background-color: #ffffff; /* White background for sections */
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            border: 1px solid #e2e8f0; /* Light border */
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #0f79b7; /* Primary Blue for section titles */
+            margin-bottom: 24px;
+            text-align: center;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0f79b7; /* Primary Blue underline */
+        }
+        .content-block {
+            margin-bottom: 24px;
+            padding: 16px;
+            background-color: #fff8e1; /* Very light yellow for content blocks */
+            border-left: 4px solid #0f79b7; /* Primary Blue left border */
+            border-radius: 8px;
+        }
+        .content-block h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4a5568; /* Dark grey for subheadings */
+            margin-bottom: 12px;
+        }
+        .content-block p, .content-block ul {
+            font-size: 1.1rem;
+            color: #4a5568; /* Dark grey for text */
+        }
+        .content-block ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .content-block ul li {
+            margin-bottom: 8px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0f79b7; /* Primary Blue for back to top button */
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            line-height: 1;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s, transform 0.1s;
+            z-index: 999;
+        }
+        .back-to-top:hover {
+            background-color: #0b6094; /* Darker blue on hover */
+            transform: translateY(-2px);
+        }
+        /* Specific text colour adjustments based on new palette */
+        .text-blue-700-custom {
+            color: #0f79b7; /* Primary blue for main invitation text */
+        }
+        .link-blue-custom {
+            color: #0f79b7; /* Primary blue for links */
+        }
+        .registration-link-button {
+            display: inline-block; /* Make it behave like a button */
+            background-color: #fdcf00; /* Yellow for the button */
+            color: #2d3748; /* Dark text for contrast on yellow */
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none; /* Remove underline from link */
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        .registration-link-button:hover {
+            background-color: #fdd835; /* Slightly lighter yellow on hover */
+            transform: translateY(-1px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar-container {
+                flex-direction: column;
+                text-align: centre;
+            }
+            .nav-links {
+                margin-top: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: centre;
+            }
+            .nav-links a {
+                margin: 0.5rem;
+            }
+            .section-title {
+                font-size: 1.75rem;
+            }
+            .section-container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-title">Biathle & Triathle Championships</div>
+            <div class="nav-links">
+                <a href="#invitation">Invitation</a>
+                <a href="#registration">Registration</a>
+                <a href="#rules">Rules</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#other-info">Other Info</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Invitation Section -->
+    <div id="invitation" class="section-container">
+        <h1 class="section-title">Invitation</h1>
+        <div class="content-block">
+            <p class="text-xl font-semibold mb-4 text-centre text-blue-700-custom">Gauteng Modern Pentathlon invites you to the:</p>
+            <h2 class="text-4xl font-extrabold text-centre text-gray-900 mb-6">Biathle & Triathle Championships 2025</h2>
+            <p class="text-2xl text-centre text-gray-700 mb-2"><strong>Date:</strong> 30 August 2025</p>
+            <p class="text-2xl text-centre text-gray-700 mb-4"><strong>Venue:</strong> Hoërskool Montana, corner of Dr. Swanepoel and, 6th Rd, Montana, Pretoria, 0151</p>
+            <p class="text-centre">
+                <a href="https://www.google.com/maps/dir//Ho%C3%ABrskool+Montana,+corner+of+Dr.+Swanepoel+and,+6th+Rd,+Montana,+Pretoria,+0151/@-25.673527,28.2402308,885m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x1ebfdefb15351bdd:0x9acb845f7c1c24b7!2m2!1d28.2428057!2d-25.6735319!3e0?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+                   target="_blank" class="link-blue-custom hover:underline text-lg font-semibold">
+                   Get Directions on Google Maps
+                </a>
+            </p>
+            <p class="text-lg text-centre text-gray-600 mt-4">Join us for an exciting day of swimming, running, and shooting (for Triathle)!</p>
+        </div>
+    </div>
+
+    <!-- Registration Section -->
+    <div id="registration" class="section-container">
+        <h1 class="section-title">Registration</h1>
+        <div class="content-block">
+            <h3>How to Register:</h3>
+            <p class="mb-4">Registrations for the Gauteng Modern Pentathlon Biathle & Triathle Championships are now open. Please complete payment by <strong>28 August 2025</strong>.</p>
+            <div class="text-centre">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGedalrZz--O2AGRGjyuXx_YX9hbrF21KckD4kid10UzbqyQ/viewform?usp=dialog" target="_blank" class="registration-link-button">Register Here!</a>
+            </div>
+            <p class="mt-4 mb-2"><strong>Registration Fee:</strong> R150 per event (R300 for both).</p>
+            <p class="mb-4 text-centre">
+                <strong>Payee: Gauteng Modern Pentathlon</strong><br>
+                <strong>Bank: Bank Zero</strong><br>
+                <strong>Bank Details:</strong><br>
+                Account Type: Cheque Account<br>
+                Account Number: 80204943553<br>
+                Branch Code: 888000
+            </p>
+            <p class="mb-4">Ensure you have all necessary details ready, including emergency contact information.</p>
+        </div>
+        <div class="content-block">
+            <h3>Required Equipment:</h3>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Athletic running shoes</li>
+                <li>Comfortable sportswear (swimsuit, running attire)</li>
+                <li>Goggles</li>
+                <li>Towel</li>
+                <li>Laser pistol (for Triathle participants only - Provincial pistols will be available for those who don't have their own)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Rules Section -->
+    <div id="rules" class="section-container">
+        <h1 class="section-title">Rules</h1>
+        <div class="content-block">
+            <h3>Qualification Criteria:</h3>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Have completed at least 2 Biathle or Triathle events prior to this championship.</li>
+                <li>Be fully affiliated to SAMPA and the Province.</li>
+                <li>Pay before the deadline of <strong>28 August 2025</strong>.</li>
+                <li>Pay the full registration fee.</li>
+            </ul>
+            <p class="mt-4">Meeting these criteria is essential for participation in the championships.</p>
+        </div>
+        <div class="content-block">
+            <h3>General Biathle & Triathle Rules:</h3>
+            <p class="mb-4">The competition will adhere to the latest UIPM Biathle/Triathle rules and regulations. Key aspects include:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li><strong>Swimming:</strong> All participants must be competent swimmers.</li>
+                <li><strong>Running:</strong> Competitors will complete designated running distances.</li>
+                <li><strong>Shooting (for Triathle):</strong> Participants in Triathle will also complete a laser shooting leg. Specific pistol and target requirements will be strictly enforced.</li>
+                <li><strong>Transitions:</strong> Efficient transitions between disciplines are crucial.</li>
+                <li><strong>Fair Play:</strong> All participants are expected to demonstrate sportsmanship and adherence to rules.</li>
+            </ul>
+            <p class="mt-4">A detailed rulebook can be requested via email or will be available at the event briefing.</p>
+        </div>
+        <div class="content-block">
+            <h3>Important Race Rules & Distances:</h3>
+            <ul class="list-disc list-inside space-y-2">
+                <li>The "lap rule" may be enforced during the running and swimming portions of the event. Any competitor who is lapped by the leading participant in their heat may be eliminated from the race. This is for safety and to maintain race flow.</li>
+                <li>For detailed distances per age category for Biathle and Triathle, please refer to the official UIPM Competition Rules document:</li>
+            </ul>
+            <p class="text-centre mt-4">
+                <a href="https://www.fppm.pt/pentatlomoderno/bt_competition_rules_2025_final.pdf" target="_blank" class="link-blue-custom hover:underline text-lg font-semibold">
+                   View Official UIPM Biathle/Triathle Rules (PDF)
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Schedule Section -->
+    <div id="schedule" class="section-container">
+        <h1 class="section-title">Provisional Schedule</h1>
+        <div class="content-block">
+            <p class="mb-4">This is a provisional schedule and is subject to change based on participant numbers and final arrangements. Please check back closer to the event date for the definitive schedule.</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li><strong>09:00:</strong> Registration & Check-in</li>
+                <li><strong>09:30:</strong> Warm-up & Course Familiarisation</li>
+                <li><strong>09:45 - 10:00:</strong> Opening Ceremony</li>
+                <li><strong>10:00 - Approx. 2 hours:</strong> Biathle Competition Heats (Swim, Run - Age categories will run as per Heat Sheets)</li>
+                <li><strong>Immediately following Biathle (Approx. 1 hour 30 minutes):</strong> Triathle Competition Heats (Swim, Run, Shoot - Age categories will run as per Heat Sheets)</li>
+                <li><strong>15 Minutes after Triathle final heat:</strong> Medal Ceremony & Closing</li>
+            </ul>
+            <p class="mt-4">Specific heat times for each category will be communicated after registration closes.</p>
+        </div>
+    </div>
+
+    <!-- Other Information Section -->
+    <div id="other-info" class="section-container">
+        <h1 class="section-title">Other Information</h1>
+        <div class="content-block">
+            <h3>Facilities & Amenities:</h3>
+            <ul class="list-disc list-inside space-y-2">
+                <li><strong>Parking:</strong> Ample parking will be available on-site at the venue.</li>
+                <li><strong>Food & Beverages:</strong> To be confirmed.</li>
+                <li><strong>First Aid:</strong> A qualified medical team will be on standby throughout the event.</li>
+                <li><strong>Restrooms:</strong> Accessible restrooms will be available.</li>
+            </ul>
+        </div>
+        <div class="content-block">
+            <h3>Spectators:</h3>
+            <p class="mb-4">Spectators are welcome to attend and support the athletes! Please be mindful of competition areas and follow instructions from event marshals.</p>
+        </div>
+        <div class="content-block">
+            <h3>Contact Information:</h3>
+            <p>For any queries regarding the event, please contact:</p>
+            <p class="text-centre"><strong>Gauteng Modern Pentathlon Organising Committee</strong></p>
+            <p class="text-centre">Email: <a href="mailto:gautengchairman@sapentathlon.org.za" class="link-blue-custom hover:underline">gautengchairman@sapentathlon.org.za</a></p>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" title="Back to Top">&#9650;</a>
+    <script>
+        // No specific JavaScript needed for static sections,
+        // as the content is displayed directly from HTML.
+    </script>
+</body>
+</html>
